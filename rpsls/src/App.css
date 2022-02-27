@@ -1,9 +1,15 @@
+:root {
+  /* background color */
+  --light-bg-color: #FCD5CE;
+  --dark-bg-color: #0D1821;
+}
 .App {
   text-align: center;
+  background-color: #444446;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 180px;
   pointer-events: none;
 }
 
@@ -13,13 +19,13 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.content {
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -61,3 +67,36 @@ h1 .lizard {
 h1 .spock{ 
   color: #7892bc
 }
+/*************  Color Mode Button  *****************/
+ /* #region Color Mode Button */
+  .color-mode-container{
+    border: 1px solid white;
+    position:relative;
+    height: 2vh;
+    width: clamp(2%, 4%, 4%);
+    background-color: white;
+    border-radius: 34px;
+  }
+  .color-mode{
+    background-color: grey;
+    border-radius:50%;
+    height: 100%;
+    width:50%;
+    cursor:pointer;
+   
+  }
+  .color-mode:before{
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  }
+
+/* #endregion Color Mode */
