@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+h1{ 
+  font-family: Impact;
+  font-weight: 500;
+}
+
+h1 .rock{ 
+  color: #ffd6d6
+}
+
+h1 .paper {
+  color: #fdf5d5
+}
+
+h1 .scissors { 
+  color: #f6d6ff
+}
+
+h1 .lizard {
+  color: #d8f4d8
+}
+
+h1 .spock{ 
+  color: #7892bc
+}
