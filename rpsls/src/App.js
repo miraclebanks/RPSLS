@@ -11,7 +11,8 @@ function App() {
   function toggleColorMode(event) {
     const self = event.target;
     const container = self.parentElement;
-    const entireApp = container.parentElement.parentElement;
+    const entireApp = container.parentElement.parentElement.parentElement;
+    console.log(entireApp);
     if (self.classList.contains('light-mode')) {
       self.classList.remove('light-mode');
       container.classList.remove('light-mode-container');
@@ -29,18 +30,19 @@ function App() {
         <section className="color-mode-section">
           <img className="color-mode-image" src={moon} />
           <div className="color-mode-container">
-            <div className="color-mode" onClick={toggleColorMode}></div></div>
+            <div className="color-mode" onClick={toggleColorMode}>
+            </div>
+          </div>
           <img className="color-mode-image" src={sun} />
         </section>
-        <BrowserRouter>
-          <Routes>
-            {/* <Route path="/" element={<Test/>}/>
-        <Route path="404" element={<Page404/>}/> */}
-            <Route path="/" element={<HomeScreen />}></Route>
-            <Route path="game" element={<GameBoard />}> </Route>
-          </Routes>
-        </BrowserRouter>
       </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomeScreen />}></Route>
+          <Route path="game" element={<GameBoard />}> </Route>
+        </Routes>
+      </BrowserRouter>
+
     </div>
 
   );

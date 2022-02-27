@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/main.css';
+import './styles/HomeScreen.css';
 import logo from "./RPSLS.png"
 import {Link} from 'react-router-dom';
 
