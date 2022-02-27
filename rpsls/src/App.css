@@ -22,9 +22,14 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.content-container{
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px)
+   /* -webkit-backdrop-filter: blur(10px);
+  border-radius: 10%; */ 
+}
 
 .content {
-
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -71,6 +76,15 @@ h1 .lizard {
 h1 .spock{ 
   color: #7892bc
 }
+a {
+   background: white;
+   height: 20%;
+   width: 30%;
+   margin-top: 10%; 
+   border: 1px solid white;
+   color: black;
+   border-radius: 10px;
+}
 /*************  Color Mode Button  *****************/
  /* #region Color Mode Button */
  .app-light-mode {
@@ -83,6 +97,7 @@ h1 .spock{
     width: clamp(55px, 60px ,70px);
     background-color: white;
     border-radius: 34px;
+    margin-bottom: 7px;
   }
   .light-mode-container{ 
     background:grey;
@@ -94,7 +109,6 @@ h1 .spock{
     height: 100%;
     width:40%;
     cursor:pointer;
-   
   }
   .light-mode{
     transform: translateX(35px);
