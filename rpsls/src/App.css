@@ -74,7 +74,7 @@ h1 .spock{
 /*************  Color Mode Button  *****************/
  /* #region Color Mode Button */
  .app-light-mode {
-   background-color: var(---light-bg-color);
+   background-color: var(--light-bg-color);
  }
   .color-mode-container{
     border: 1px solid white;

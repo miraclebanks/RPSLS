@@ -10,6 +10,7 @@ function App() {
     if ( self.classList.contains('light-mode') ) { 
       self.classList.remove('light-mode');
       container.classList.remove('light-mode-container');
+      entireApp.classList.remove('app-light-mode');
     } else { 
       self.classList.add('light-mode');
       container.classList.add('light-mode-container');
