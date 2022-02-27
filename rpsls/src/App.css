@@ -24,7 +24,8 @@
 }
 .content-container{
   background-color: rgba(0,0,0,0.5);
-  backdrop-filter: blur(10px)
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
    /* -webkit-backdrop-filter: blur(10px);
   border-radius: 10%; */ 
 }
@@ -52,7 +53,7 @@
   }
 }
 
-h1{ 
+/* h1{ 
   font-family: Impact;
   font-weight: 500;
 }
@@ -84,17 +85,23 @@ a {
    border: 1px solid white;
    color: black;
    border-radius: 10px;
-}
+} */
 /*************  Color Mode Button  *****************/
  /* #region Color Mode Button */
+ .color-mode-section{ 
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   margin-bottom: 10px;
+ }
  .app-light-mode {
    background-color: var(--light-bg-color);
  }
   .color-mode-container{
     border: 1px solid white;
     position:relative;
-    height: 2vh;
-    width: clamp(55px, 60px ,70px);
+    height: 20px;
+    width: clamp(45px, 50px ,60px);
     background-color: white;
     border-radius: 34px;
     margin-bottom: 7px;
@@ -107,12 +114,16 @@ a {
     background-color: grey;
     border-radius:50%;
     height: 100%;
-    width:40%;
+    width:50%;
     cursor:pointer;
   }
   .light-mode{
-    transform: translateX(35px);
+    transform: translateX(24px);
     background-color: white;
   }
-
+.color-mode-image{
+  height: 28px;
+  margin-top: -5px;
+  display: inline-block;
+}
 /* #endregion Color Mode */
