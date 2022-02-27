@@ -12,7 +12,6 @@ function App() {
     const self = event.target;
     const container = self.parentElement;
     const entireApp = container.parentElement.parentElement.parentElement;
-    console.log(entireApp);
     if (self.classList.contains('light-mode')) {
       self.classList.remove('light-mode');
       container.classList.remove('light-mode-container');
