@@ -1,4 +1,5 @@
-// import { ReactDOM } from "react-dom";
+import React, { Component } from "react";
+import PopUp from "./components/PopUp/PopUp.tsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeScreen from "./components/HomeScreen/HomeScreen.js";
 import GameBoard from './components/GameBoard/GameBoard.tsx'
@@ -33,6 +34,9 @@ function App() {
             </div>
           </div>
           <img className="color-mode-image" src={sun} />
+        </section>
+        <section className ='rules-section'>
+          <PopUp className='rules-button'>Rules</PopUp>
         </section>
       </header>
       <BrowserRouter>

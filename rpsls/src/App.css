@@ -7,7 +7,7 @@
 }
 .App {
   text-align: center;
-  background-color: #444446;
+  background: radial-gradient(#000000, #434343);
   color: var(--dark-txt-color);
   height: 100%;
 }
@@ -19,6 +19,9 @@
 
 .App-header{ 
   padding: 10px;
+  display:flex;
+  justify-content: space-between;
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -49,7 +52,7 @@
    margin-bottom: 10px;
  }
  .app-light-mode {
-   background-color: var(--light-bg-color);
+  background: radial-gradient(#e66465, #9198e5);
    color:var(--light-txt-color);
    height: 100%;
  }
@@ -83,3 +86,28 @@
   display: inline-block;
 }
 /* #endregion Color Mode */
+
+/*************  Rules Button  *****************/
+/* #region Rules Button */
+.rules-section{
+  height: 30px;
+  width:100px;
+  display:flex;
+  justify-content: center;
+ 
+}
+.rules-button{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 10%;
+  width:80%;
+  color:white;
+  cursor:pointer;
+}
+.rules-button:hover{
+  background:grey;
+}
+
+/* #endregion Rules Button */
