@@ -50,7 +50,8 @@
  }
  .app-light-mode {
    background-color: var(--light-bg-color);
-   color:var(--light-txt-color)
+   color:var(--light-txt-color);
+   height: 100%;
  }
   .color-mode-container{
     border: 1px solid white;

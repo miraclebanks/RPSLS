@@ -2,19 +2,35 @@
 .gameBoard {
     display:flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     height:90%;
     width:100%;
 }
+.scoreBoard {
+    border: 1px solid black;
+    height: 30%;
+    width: 60%;
+}
 .gamePieces {
     display: flex;
     flex-direction: row;
-    height:100%;
-    width:100%;
+    align-items:center;
+    justify-content:center;
+    height:50%;
+    width:80%;
+    margin-top: 2%;
 }
 .gamePieces > div{
-    background-color: black;
-    border: 1px solid white;
-    height: 40%;
-    width: 20%;
+    background-color: white;
+    border: 1px solid black;
+    height: 100px;
+    width: 200px;
+    border-radius:50%;
 } 
+.spock, .paper{
+    align-self:start;
+}
+.rock {
+    align-self:end;
+}
