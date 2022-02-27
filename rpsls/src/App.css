@@ -61,7 +61,7 @@
     position:relative;
     height: 20px;
     width: clamp(45px, 50px ,60px);
-    background-color: white;
+    
     border-radius: 34px;
     margin-bottom: 7px;
   }
@@ -70,11 +70,12 @@
   }
   .color-mode{
     transition: 240ms ease-in-out;
-    background-color: grey;
+    background-color: white;
     border-radius:50%;
     height: 100%;
     width:50%;
     cursor:pointer;
+    
   }
   .light-mode{
     transform: translateX(24px);

@@ -22,6 +22,7 @@ function GameBoard() {
         <div className="lizard" onClick={() => userClick('lizard')}>lizard</div>
         <div className="spock" onClick={() => userClick('spock')}>spock</div>
         {/* <div className="kirby"></div> */}
+        {/* <div><img src=''/></div> */}
       </div>
     </section>
 
