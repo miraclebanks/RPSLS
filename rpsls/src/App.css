@@ -13,6 +13,10 @@
   pointer-events: none;
 }
 
+.App-header{ 
+  padding: 10px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -69,34 +73,32 @@ h1 .spock{
 }
 /*************  Color Mode Button  *****************/
  /* #region Color Mode Button */
+ .app-light-mode {
+   background-color: var(---light-bg-color);
+ }
   .color-mode-container{
     border: 1px solid white;
     position:relative;
     height: 2vh;
-    width: clamp(2%, 4%, 4%);
+    width: clamp(55px, 60px ,70px);
     background-color: white;
     border-radius: 34px;
   }
+  .light-mode-container{ 
+    background:grey;
+  }
   .color-mode{
+    transition: 240ms ease-in-out;
     background-color: grey;
     border-radius:50%;
     height: 100%;
-    width:50%;
+    width:40%;
     cursor:pointer;
    
   }
-  .color-mode:before{
-  position: absolute;
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  .light-mode{
+    transform: translateX(35px);
+    background-color: white;
   }
 
 /* #endregion Color Mode */

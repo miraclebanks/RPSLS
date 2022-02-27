@@ -2,19 +2,35 @@ import logo from './RPSLS.png';
 import './App.css';
 
 function App() {
+  
+  function toggleColorMode(event){ 
+    const self = event.target;
+    const container = self.parentElement;
+    const entireApp = container.parentElement;
+    if ( self.classList.contains('light-mode') ) { 
+      self.classList.remove('light-mode');
+      container.classList.remove('light-mode-container');
+    } else { 
+      self.classList.add('light-mode');
+      container.classList.add('light-mode-container');
+      entireApp.classList.add('app-light-mode');
+    }
+    
+  }
 
   return (
     <div className="App">
 
       <header className="App-header">
-        <div class="color-mode-container"><div class="color-mode"></div></div>
-        <div class='content'>
+        <div className="color-mode-container">
+          <div className="color-mode" onClick={toggleColorMode}></div></div>
+        <div className='content'>
           <h1>
-            <span class="rock">Rock</span>,
-            <span class="paper">Paper</span>,
-            <span class="scissors">Scissors</span>, <br></br>
-            <span class="lizard">Lizard</span>,
-            <span class="spock">Spock</span>
+            <span className="rock">Rock</span>,
+            <span className="paper">Paper</span>,
+            <span className="scissors">Scissors</span>, <br></br>
+            <span className="lizard">Lizard</span>,
+            <span className="spock">Spock</span>
           </h1>
           <img src={logo} className="App-logo" alt="logo" />
           </div >
@@ -22,6 +38,8 @@ function App() {
     </div>
     
   );
+  
 }
+
 
 export default App;
