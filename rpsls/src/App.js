@@ -2,6 +2,7 @@ import logo from './RPSLS.png';
 import './App.css';
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
@@ -21,6 +22,7 @@ function App() {
       </header>
     </div>
   );
+  
 }
 
 export default App;
