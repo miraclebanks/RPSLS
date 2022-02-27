@@ -199,17 +199,18 @@ function App() {
         "type": "images",
         "options": {
           "images": {
-            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/TBBT_logo.svg/828px-TBBT_logo.svg.png",
-            "width": 500,
-            "height": 634
+            "src": "https://i.kym-cdn.com/photos/images/original/001/018/269/b21.png",
+            "width": 900,
+            "height": 800
           }
         }
       },
+     
       "size": {
         "value": 80
       },
       "move": {
-        "speed": 15,
+        "speed": 8,
         "outModes": {
           "default": "none",
           "right": "destroy"
@@ -233,7 +234,7 @@ function App() {
     },
     "position": {
       "x": -5,
-      "y": 90
+      "y": 45
     }
   }
 }}/>
