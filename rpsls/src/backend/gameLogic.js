@@ -1,6 +1,5 @@
-import { ModuleKind } from "typescript";
 
-const winnersToLosersMap = {
+export const winnersToLosersMap = {
     "scissors": ["paper", "lizard"],
     "paper": ["rock", "spock"],
     "rock": ["scissors", "lizard"],
@@ -8,7 +7,7 @@ const winnersToLosersMap = {
     "spock": ["rock", "scissors"]
 }
 
-const moveChoices = Object.keys( winnersToLosersMap );
+export const moveChoices = Object.keys( winnersToLosersMap );
 
 
 
@@ -22,7 +21,7 @@ function run() {
 
 
 
-function getRandomComputerChoice() { 
+export function getRandomComputerChoice() { 
     return getRandomElementFromArray( moveChoices );
 }
 
@@ -31,14 +30,7 @@ function getRandomElementFromArray(array) {
     return array[randomIndex];
 }
 
-function isWinner(move, moveToCheckAgainst) {
+export function isWinner(move, moveToCheckAgainst) {
     const losers = winnersToLosersMap[move];
     return losers.includes( moveToCheckAgainst );
-}
-
-module.exports = { 
-    winnersToLosersMap,
-    moveChoices,
-    getRandomComputerChoice,
-    isWinner
 }
