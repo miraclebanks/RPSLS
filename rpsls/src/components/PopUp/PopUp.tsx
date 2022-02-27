@@ -10,9 +10,11 @@ const customStyles = {
   content: {
     height: '700px',
     width: '700px',
-    transform: 'translate(40%, 15%)',
     backgroundColor:'rgba(255,255,255,.8)',
     backdropFilter: 'blur(5px)',
+    position: 'absolute',
+    top: 'calc(50% - 350px)',
+    left: 'calc(50% - 350px)'
   }
 }
 

@@ -1,3 +1,5 @@
+import { ModuleKind } from "typescript";
+
 const winnersToLosersMap = {
     "scissors": ["paper", "lizard"],
     "paper": ["rock", "spock"],
@@ -34,3 +36,9 @@ function isWinner(move, moveToCheckAgainst) {
     return losers.includes( moveToCheckAgainst );
 }
 
+module.exports = { 
+    winnersToLosersMap,
+    moveChoices,
+    getRandomComputerChoice,
+    isWinner
+}
