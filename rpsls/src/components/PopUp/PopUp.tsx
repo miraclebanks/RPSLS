@@ -18,22 +18,24 @@ const customStyles = {
   }
 }
 
+
+
 Modal.setAppElement('#root');
 
 function PopUp(props) {
+  let {children, showBoard, setShowBoard} = props;
   const [open, setOpen] = useState(false);
-  const openModal = () => {
-    setOpen(true);
+  const toggleModal = () => {
+    setOpen(!open);
+    setShowBoard(!showBoard);
   }
-  const closeModal = () => {
-    setOpen(false);
-  }
+ 
   return (
     <>
-      <button className='open-button' onClick={openModal}>{props.children} </button>
-      <Modal className ='modal' isOpen={open} style={customStyles} onRequestClose={() => setOpen(false)}>
-        <button className='close-button' onClick={closeModal}>x</button>
-        <Rules></Rules>
+      <button className='open-button' onClick={toggleModal}>{children} </button>
+      <Modal className ='modal' isOpen={open} style={customStyles} onRequestClose={toggleModal}>
+        <button className='close-button' onClick={toggleModal}>x</button>
+        <Rules/>
       </Modal>
     </>
   )

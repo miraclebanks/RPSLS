@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import PopUp from "./components/PopUp/PopUp.tsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Particles from "react-tsparticles";
@@ -9,6 +9,9 @@ import moon from "./moon.png"
 import sun from "./sun.png"
 
 function App() {
+  let [showBoard, setShowBoard] = useState(true);
+
+
   const particlesInit = (main) => {
     console.log(main);
 
@@ -48,13 +51,16 @@ function App() {
           <img className="color-mode-image" src={sun} />
         </section>
         <section className ='rules-section'>
-          <PopUp className='rules-button'>Rules</PopUp>
+          <PopUp className='rules-button' showBoard={showBoard} setShowBoard={setShowBoard}>
+            Rules
+          </PopUp>
         </section>
       </header>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomeScreen />}></Route>
-          <Route path="game" element={<GameBoard />}> </Route>
+          <Route path="game" element={ <GameBoard showBoard={showBoard}/>}> 
+          </Route>
         </Routes>
       </BrowserRouter>
       <Particles 
@@ -173,8 +179,8 @@ function App() {
       }
     },
     "zIndex": {
-      "value": 5,
-      "opacityRate": 0.5
+      "value": 0,
+      "opacityRate": 0.1
     }
   },
   "emitters": {
@@ -218,7 +224,7 @@ function App() {
         "straight": true
       },
       "zIndex": {
-        "value": 15
+        "value":-1
       },
       "rotate": {
         "value": {

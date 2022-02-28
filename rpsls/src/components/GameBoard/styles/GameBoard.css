@@ -29,9 +29,9 @@
     padding:1%;
     margin: 2%;
     display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
         background-color: white;
         z-index: 1;
 } 

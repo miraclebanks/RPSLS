@@ -3,7 +3,8 @@ import { gameResults, getRandomComputerChoice, handleResult } from '../../backen
 import './styles/GameBoard.css';
 
 
-function GameBoard() {
+function GameBoard(props) {
+  let {showBoard} = props;
   let [userScore, setUserScore] = useState(0);
   let [computerScore, setComputerScore] = useState(0);
   let [tie, setTie] = useState(0);
@@ -35,12 +36,12 @@ function GameBoard() {
       <br/>
       {userScore}:{tie}:{computerScore}
       </div>
-      <div className='gamePieces'>
-        <div className="paper" onClick={() => userClick('paper')}>paper</div>
-        <div className="scissors" onClick={() => userClick('scissors')}>scissors</div>
-        <div className="rock" onClick={() => userClick('rock')}>rock</div>
-        <div className="lizard" onClick={() => userClick('lizard')}>lizard</div>
-        <div className="spock" onClick={() => userClick('spock')}>spock</div>
+      <div className='gamePieces' style={{display: showBoard ? 'flex' :'none'}}>
+        <div className="paper" style={{display: showBoard ? 'flex' :'none'}} onClick={() => userClick('paper')}>paper</div>
+        <div className="scissors" style={{display: showBoard ? 'flex' :'none'}} onClick={() => userClick('scissors')}>scissors</div>
+        <div className="rock" style={{display: showBoard ? 'flex' :'none'}} onClick={() => userClick('rock')}>rock</div>
+        <div className="lizard" style={{display: showBoard ? 'flex' :'none'}} onClick={() => userClick('lizard')}>lizard</div>
+        <div className="spock" style={{display: showBoard ? 'flex' :'none'}} onClick={() => userClick('spock')}>spock</div>
         {/* <div className="kirby"></div> */}
         {/* <div><img src=''/></div> */}
       </div>
