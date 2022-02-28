@@ -7,30 +7,44 @@ export const winnersToLosersMap = {
     "spock": ["rock", "scissors"]
 }
 
-export const moveChoices = Object.keys( winnersToLosersMap );
+const moveChoices = Object.keys( winnersToLosersMap );
 
-
-
-run();
-
-function run() {
-    const choice = getRandomComputerChoice();
-    console.log(choice);
-    console.log(isWinner("spock", choice));
+export function getRandomComputerChoice() {
+    const randomIndex = Math.floor(Math.random() * moveChoices.length);
+    return moveChoices[randomIndex];
 }
 
-
-
-export function getRandomComputerChoice() { 
-    return getRandomElementFromArray( moveChoices );
-}
-
-function getRandomElementFromArray(array) {
-    const randomIndex = Math.floor(Math.random() * array.length);
-    return array[randomIndex];
-}
-
-export function isWinner(move, moveToCheckAgainst) {
+export function gameResults(move, moveToCheckAgainst) {
     const losers = winnersToLosersMap[move];
-    return losers.includes( moveToCheckAgainst );
+    const tie = move;
+    if(losers.includes( moveToCheckAgainst )){
+        return 'Win'
+    } else if (tie === moveToCheckAgainst) {
+        return 'Tie'
+    } else {
+        return 'Lose'
+    }
 }
+
+export function handleResult(result){
+    switch(result){
+        case 'Win':
+            break;
+        case 'Tie':
+            break;
+        case 'Lose':
+            break;        
+    }
+}
+// run();
+
+// function run() {
+//     const choice = getRandomComputerChoice();
+    // console.log(choice);
+    // console.log(isWinner("spock", choice));
+//}
+
+// export function getRandomComputerChoice() { 
+//     return getRandomElementFromArray( moveChoices );
+// }
+
